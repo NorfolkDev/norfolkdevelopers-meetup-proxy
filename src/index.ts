@@ -38,14 +38,14 @@ export default {
 
 		// Generate the URL to the Meetup API
 		const url = `https://api.meetup.com/${group}/events?photo-host=public&page=${limit}`;
-		
-		const data = await fetch(url);
-		const json = await data.json();
-		
-		return new Response(JSON.stringify(json), {
+
+		const response = await fetch(url);
+
+		return new Response(response.body, {
+			...response,
 			headers: {
+				...response.headers,
 				...CORS_HEADERS,
-				'content-type': 'application/json;charset=UTF-8',
 			},
 		});
 	},
