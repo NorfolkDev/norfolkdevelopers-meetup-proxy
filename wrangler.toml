@@ -1,3 +1,6 @@
 name = "norfolkdevelopers-meetup-proxy"
 main = "src/index.ts"
 compatibility_date = "2022-09-11"
+kv_namespaces = [
+  { binding = "SECRETS", id = "96d576d07c6b427fbfd7d23ee027392a", preview_id = "be1c2a681a8b43c190b5c2c62d964015" }
+]
